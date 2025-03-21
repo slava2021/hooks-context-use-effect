@@ -5,6 +5,7 @@ import { useData } from "./useData";
 // const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
 export const Details = ({ info }) => {
+  if (!info) return <p>Выберите пользователя</p>; // Заглушка до выбора пользователя
   const id = info?.id;
 
   const { data, loading, error } = useData({
